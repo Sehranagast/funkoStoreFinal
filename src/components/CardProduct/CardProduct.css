@@ -1,0 +1,33 @@
+.card-product__product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.card-product__product-container:hover {
+  background-color: lightyellow;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+.card-product__image {
+  width: 300px;
+  align-self: center;
+}
+
+.card-product__body-container {
+  padding: 20px;
+}
+
+.card-product__title {
+  font-weight: 600;
+}
+
+.card-product__price {
+  font-weight: 800;
+}
