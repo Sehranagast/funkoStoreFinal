@@ -1,3 +1,22 @@
+Buenas
+
+Presento este proyecto e-commerce como entrega final de ReactJS para coderhouse
+Es una tienda de muñecos funko, con su variedad de productos y acceso para una posible compra, no cuenta con medios de pago ya que es a modo de prueba y practica
+
+Fueron utilizados conceptos de:
+•HTML5
+•CSS3
+•JavasCript
+•ReactJS
+
+En el proyecto de usó e instaló:
+•react-router-dom
+•firebase
+•boxicons
+
+
+-----------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +87,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
