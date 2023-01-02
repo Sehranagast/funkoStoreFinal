@@ -14,6 +14,9 @@ En el proyecto de usó e instaló:
 •firebase
 •boxicons
 
+Acceso a un video de muestra
+
+https://www.youtube.com/watch?v=Bh_2ogPVt9k
 
 -----------
 
