@@ -5,7 +5,7 @@ import { DataContext } from "../../context/DataProvider";
 import "./Header.css";
 
 export const Header = () => {
-  const { cart, toggleModalVisibility } = useContext(DataContext);
+  const { cart } = useContext(DataContext);
 
   return (
     <header className="header__header-container">
@@ -20,12 +20,14 @@ export const Header = () => {
           <Link to="/productos">PRODUCTOS</Link>
         </li>
       </ul>
-      <div className="header__cart" onClick={toggleModalVisibility}>
-        <box-icon name="cart" />
-        {cart.length > 0 && (
-          <h4 className="header__cart-count">{cart.length}</h4>
-        )}
-      </div>
+      <Link to="/carrito">
+        <div className="header__cart">
+          <box-icon name="cart" />
+          {cart.length > 0 && (
+            <p className="header__cart-count">{cart.length}</p>
+          )}
+        </div>
+      </Link>
     </header>
   );
 };

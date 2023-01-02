@@ -31,3 +31,12 @@
 .card-product__price {
   font-weight: 800;
 }
+
+.card-product__new-tag {
+  text-align: center;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: green;
+  width: 60px;
+  color: white;
+}

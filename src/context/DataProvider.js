@@ -1,5 +1,5 @@
+import { collection, getFirestore, getDocs } from "firebase/firestore/lite";
 import React, { createContext, useState, useEffect } from "react";
-import funkoData from "../data/funkoData.json";
 
 export const DataContext = createContext();
 
@@ -8,7 +8,27 @@ export const DataProvider = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [cart, setCart] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const fetchProducts = async () => {
+    try {
+      const queryDb = getFirestore();
+      const funkos = collection(queryDb, "Products");
+
+      const response = await getDocs(funkos);
+      const data = response.docs.map((funko) => {
+        return { id: funko.id, ...funko.data() };
+      });
+      setProducts(data);
+    } catch (error) {
+      setError("No se pueden obtener los productos");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const addToCart = (product) => {
     const alreadyInCart = cart.some(
@@ -46,26 +66,6 @@ export const DataProvider = (props) => {
     setCart([]);
   };
 
-  const toggleModalVisibility = () => {
-    setIsModalVisible(!isModalVisible);
-  };
-
-  const fetchProducts = async () => {
-    try {
-      setProducts(funkoData.data);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      fetchProducts();
-    }, 2000);
-  }, []);
-
   const value = {
     products,
     isLoading,
@@ -73,8 +73,6 @@ export const DataProvider = (props) => {
     cart,
     addToCart,
     removeFromCart,
-    isModalVisible,
-    toggleModalVisibility,
     resetCart,
   };
 

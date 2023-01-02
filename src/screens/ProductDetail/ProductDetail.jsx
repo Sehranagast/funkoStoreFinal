@@ -19,7 +19,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail__product-detail-container">
-      <h1 className="product-detail__main-title">Product Detail</h1>
+      <h1 className="product-detail__main-title">Detalle del Funko</h1>
       <div className="product-detail__product-container">
         <img
           src={product.image}
@@ -28,8 +28,8 @@ const ProductDetail = () => {
         />
         <div className="product-detail__body-container">
           <h4 className="product-detail__title">{product.title}</h4>
-          <p className="product-detail__price">Price: ${product.price}</p>
-          <h4 className="product-detail__description">Description</h4>
+          <p className="product-detail__price">Precio: ${product.price}</p>
+          <h4 className="product-detail__description">Descripción</h4>
           <p className="product-detail__description">{product.description}</p>
           <div className="product-detail__actions-container">
             {alreadyInCart && (

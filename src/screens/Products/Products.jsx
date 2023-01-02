@@ -24,6 +24,7 @@ const Products = () => {
           <CardProduct
             key={product.id}
             product={product}
+            isNew={product.isNew}
             onClick={() => navigate(`/productos/${product.id}`)}
           />
         ))}

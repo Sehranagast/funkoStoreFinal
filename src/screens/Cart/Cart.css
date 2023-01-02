@@ -1,0 +1,27 @@
+.cart__container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__title {
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.cart__empty-cart-message {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cart__submit-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.cart__submit-total {
+  font-size: 24px;
+  font-weight: 800;
+}
