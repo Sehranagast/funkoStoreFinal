@@ -1,6 +1,6 @@
 Buenas
 
-Presento este proyecto e-commerce como entrega final de ReactJS para coderhouse
+Proyecto e-commerce de ReactJS
 Es una tienda de muñecos funko, con su variedad de productos y acceso para una posible compra, no cuenta con medios de pago ya que es a modo de prueba y practica
 
 Fueron utilizados conceptos de:
